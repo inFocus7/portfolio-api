@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "description": "MongoDB + GraphQL API for Fabian Gonzalez's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Gonzalez",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "graphql-markdown": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.15.0",
+    "apollo-server-micro": "^2.15.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^15.1.0",
+    "graphql-tools": "^6.0.10",
+    "mongodb": "^3.5.9"
+  }
+}
