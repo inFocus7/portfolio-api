@@ -4,6 +4,4 @@ const commonConfig = {
   corsDomain: process.env.CORS_DOMAIN || "*",
 };
 
-console.log(`Node running as ${commonConfig.env}`)
-
 export default commonConfig;

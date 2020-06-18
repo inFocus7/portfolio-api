@@ -1,4 +1,5 @@
 // HTTP SERVER
+// TODO [Optional] Set up views for general API information.
 import express from "express";
 import cors from "cors";
 import config from "./config"
@@ -16,19 +17,17 @@ function listen() {
 
 app.use(
   cors({
-    origin: config.corsDomain, // TODO Switch to production domain...
+    origin: config.corsDomain,
     optionsSuccessStatus: 200,
   })
 );
 
-app.get("/api/status", (req, res) => {
-  res.send({ status: "ok" });
+app.get("/api", (req, res) => {
+  res.send({ status: "ok", message: "Welcome to the portfolio's API! You can access the GraphQL API by sending queries to the '/api/graphql' endpoint!" });
 });
 
 // Use the GraphQL Server set-up
-// app.use(GraphQLServer.createHandler({ path: "/api/graphql" }));
-apolloServer.applyMiddleware({app});
-console.log(apolloServer.graphqlPath);
+apolloServer.applyMiddleware({app, path: '/api/graphql'});
 
 export default {
   getApp: () => app,

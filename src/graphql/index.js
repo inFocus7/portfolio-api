@@ -319,9 +319,6 @@ const apolloServer = new ApolloServer({
   },
 });
 
-// apolloServer.applyMiddleware({app});
-// console.log(apolloServer.graphqlPath);
-
 export const config = {
   api: {
     bodyParser: false,

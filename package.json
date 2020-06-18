@@ -2,11 +2,19 @@
   "name": "portfolio-api",
   "version": "1.0.0",
   "description": "MongoDB + GraphQL API for Fabian Gonzalez's portfolio",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "nodemon src/app.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "API",
+    "portfolio",
+    "Heroku",
+    "GraphQL",
+    "Express",
+    "MongoDB"
+  ],
   "author": "Fabian Gonzalez",
   "license": "ISC",
   "devDependencies": {
@@ -20,11 +28,13 @@
   },
   "dependencies": {
     "apollo-server-express": "^2.15.0",
-    "apollo-server-micro": "^2.15.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql": "^15.1.0",
     "graphql-tools": "^6.0.10",
     "mongodb": "^3.5.9"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
