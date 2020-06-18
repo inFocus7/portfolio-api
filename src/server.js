@@ -2,8 +2,8 @@
 // TODO [Optional] Set up views for general API information.
 import express from "express";
 import cors from "cors";
-import config from "./config"
-import apolloServer from "./graphql/index"
+import config from "./config.js"
+import apolloServer from "./graphql/index.js"
 
 const app = express();
 

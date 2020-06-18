@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "MongoDB + GraphQL API for Fabian Gonzalez's portfolio",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node --experimental-modules src/app.js",
     "dev": "nodemon src/app.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

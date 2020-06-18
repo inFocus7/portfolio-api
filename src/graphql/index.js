@@ -1,6 +1,10 @@
-import { ApolloServer, gql } from "apollo-server-express";
-import { MongoClient } from "mongodb";
-import { makeExecutableSchema } from "graphql-tools";
+// TODO Learn more about importing/require...
+import apollo from "apollo-server-express";
+const { ApolloServer, gql } = apollo;
+import mongo from "mongodb";
+const { MongoClient } = mongo;
+import gqltools from "graphql-tools";
+const { makeExecutableSchema } = gqltools;
 
 // TODO Split types into seperate files.
 const typeDefs = gql`
