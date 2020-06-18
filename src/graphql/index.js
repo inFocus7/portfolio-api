@@ -1,4 +1,5 @@
 // TODO Learn more about importing/require...
+// TODO Caching?
 import apollo from "apollo-server-express";
 const { ApolloServer, gql } = apollo;
 import mongo from "mongodb";
@@ -305,7 +306,7 @@ const apolloServer = new ApolloServer({
     if (!db) {
       try {
         const dbClient = new MongoClient(
-          `mongodb+srv://reader:${process.env.GPORTFOLIO_PASS}@portfolio-v3qws.mongodb.net/portfolio?retryWrites=true&w=majority`,
+          `mongodb+srv://reader:${process.env.MONGOPORTFOLIO_PASS}@${process.env.MONGOPORTFOLIO_REF}/portfolio?retryWrites=true&w=majority`,
           {
             useNewUrlParser: true,
             useUnifiedTopology: true,
